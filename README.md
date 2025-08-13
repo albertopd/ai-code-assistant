@@ -39,11 +39,12 @@ ai-code-assistant/
 └── utils/
     ├── base_reader.py          # Abstract class for input readers
     ├── base_writer.py          # Abstract class for output writers
+	├── console_reader.py       # Concrete reader for console input
+    ├── console_writer.py       # Concrete writer for console output
     ├── file_reader.py          # Concrete reader from code files
-    ├── user_input_reader.py    # Concrete reader from user input
+	├── llm_client.py           # Handles communication with the LLM
     ├── markdown_writer.py      # Concrete writer to markdown files
-    ├── llm_client.py           # Handles communication with the LLM
-    └── prompt_template.py      # Stores prompt templates
+    └── prompt_templates.py     # Stores prompt templates
 ```
 
 ---
