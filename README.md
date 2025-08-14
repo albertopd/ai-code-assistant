@@ -80,21 +80,38 @@ ai-code-assistant/
 
 ## 🚀 Usage
 
-**Process a file:**
+### Process a file
 
 ```bash
-python ai-code-assistant.py path/to/code_file.ext
+python ai-code-assistant.py <path/to/code_file.ext>
 ```
 
 The explanation will be saved in `data/explanations/` as a Markdown file named after your input file.
 
-**Manual input (if no file is provided):**
+**How to specify the error in your code file:**
+
+To help the assistant identify the error, add a comment line at the top of your code file using the `[ERROR]` tag, followed by your error message. For example:
+
+```python
+# [ERROR] IndexError: list index out of range
+my_list = []
+print(my_list[0])
+```
+
+You can use the appropriate comment syntax for your language (e.g., `#` for Python, `//` for JavaScript, `--` for SQL, etc.).
+
+### Manual input (if no file is provided)
 
 ```bash
 python ai-code-assistant.py
 ```
 
 You will be prompted to enter the error message and code snippet interactively. The explanation will be shown in the console.
+
+---
+
+**Note:**
+If you do not provide an error message (either in the code file or when prompted for manual input), the AI will automatically analyze your code and attempt to identify and explain any errors it finds.
 
 ---
 
