@@ -1,4 +1,4 @@
-#[ERROR] ZeroDivisionError: division by zero
+# [ERROR] ZeroDivisionError: division by zero
 
 x = 10
 y = 0
