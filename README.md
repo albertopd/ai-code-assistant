@@ -4,8 +4,6 @@
 
 AI Code Assistant analyzes code snippets and error messages, providing clear, conceptual explanations of errors. It helps users understand what went wrong, why it happened, and how to fix it—without generating or suggesting full code solutions. The assistant is language-agnostic and designed for learning, debugging, and code review support.
 
----
-
 ## ✨ Features
 - Accepts code and error input from files or manual console entry
 - Uses a Language Model (Google Gemini) to analyze code and errors
@@ -18,9 +16,7 @@ AI Code Assistant analyzes code snippets and error messages, providing clear, co
 - Easily extensible—add new input readers or output writers with minimal effort
 - Designed for education, debugging, and code review workflows
 
----
-
-## 🗂️ Project Structure
+## 📂 Project Structure
 
 ```
 ai-code-assistant/
@@ -46,7 +42,11 @@ ai-code-assistant/
 	└── prompt_templates.py     # Prompt templates for LLM requests
 ```
 
----
+## Requirements
+
+- Python 3.12+
+- [python-dotenv](https://pypi.org/project/python-dotenv/)
+- [google-genai](https://pypi.org/project/google-genai/)
 
 ## 📦 Installation
 
@@ -57,12 +57,12 @@ ai-code-assistant/
 	```
 
 2. **Create a virtual environment**
-	*Windows:*
+	- *Windows:*
 	  ```bash
 	  python -m venv venv
 	  venv\Scripts\activate
 	  ```
-	*Mac/Linux:*
+	- Mac/Linux:*
 	  ```bash
 	  python3 -m venv venv
 	  source venv/bin/activate
@@ -73,10 +73,14 @@ ai-code-assistant/
 	pip install -r requirements.txt
 	```
 
-4. **Configure your API key and model**
-	Create a `.env` file in the project root and add the necessary environment variables (see [Configuration](#configuration) section).
+## ⚙️ Configuration
 
----
+Create a `.env` file in the project root and add the necessary environment variable:
+
+```env
+GOOGLE_API_KEY=<your_google_gemini_api_key>
+AI_MODEL=<your_model_name>
+```
 
 ## 🚀 Usage
 
@@ -108,38 +112,13 @@ python ai-code-assistant.py
 
 You will be prompted to enter the error message and code snippet interactively. The explanation will be shown in the console.
 
----
+***Note:**
+If you do not provide an error message (either in the code file or when prompted for manual input), the AI will automatically analyze your code and attempt to identify and explain any errors it finds.*
 
-**Note:**
-If you do not provide an error message (either in the code file or when prompted for manual input), the AI will automatically analyze your code and attempt to identify and explain any errors it finds.
-
----
-
-## Requirements
-
-- Python 3.12+
-- [python-dotenv](https://pypi.org/project/python-dotenv/)
-- [google-genai](https://pypi.org/project/google-genai/)
-
----
-
-## ⚙️ Configuration <a id="configuration"></a>
-
-Set your Google Gemini API key and model in a `.env` file:
-
-```env
-GOOGLE_API_KEY=<your_google_gemini_api_key>
-AI_MODEL=<your_model_name>
-```
-
----
-
-## 📄 License
+## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
 
----
+## 👤 Author
 
-## 👥 Contributors
-
-- [Alberto Pérez Dávila](https://github.com/albertopd)
+[Alberto Pérez Dávila](https://github.com/albertopd)
