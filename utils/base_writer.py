@@ -15,4 +15,4 @@ class BaseWriter(ABC):
         Args:
             explanation (str): The explanation to output.
         """
-        pass
+        ...

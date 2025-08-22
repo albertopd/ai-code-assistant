@@ -17,4 +17,4 @@ class BaseReader(ABC):
         Returns:
             Tuple[str, str]: The code snippet and the error message.
         """
-        pass
+        ...
